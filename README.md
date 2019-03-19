@@ -1,5 +1,7 @@
 # BellyButtonDiversity
 
+Final deployed Heroku app can be found at <https://belly-button-diversity-cjv.herokuapp.com/>
+
 ## Step 1 - Plotly.js
 
 Use Plotly.js to build interactive charts for your dashboard.
