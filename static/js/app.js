@@ -48,7 +48,17 @@ function pieChart(data) {
   ];
 
   var layout = {
-    title: "<b> Belly Button OTU Distribution </b>"
+    title: "<b> Belly Button OTU Distribution </b>",
+    annotations: [
+      {
+        font: {
+          size: 14
+        },
+        showarrow: false,
+        text: 'OTU ID',
+        x: 1.27,
+        y: 1.08
+      }]
   };
 
   Plotly.newPlot("pie", trace, layout, { responsive: true });
@@ -92,16 +102,16 @@ function bubbleChart(data) {
 // buildGauge(data.WFREQ);
 function gaugeChart(data) {
   // Enter a speed between 0 and 180
-  let degree = parseInt(data.WFREQ) * (180 / 10);
+  var degree = parseInt(data.WFREQ) * (180 / 10);
 
-  let level = degree;
+  var level = degree;
 
   // Trig to calc meter point
-  let degrees = 180 - level,
+  var degrees = 180 - level,
     radius = 0.5;
-  let radians = (degrees * Math.PI) / 180;
-  let x = radius * Math.cos(radians);
-  let y = radius * Math.sin(radians);
+  var radians = (degrees * Math.PI) / 180;
+  var x = radius * Math.cos(radians);
+  var y = radius * Math.sin(radians);
 
   // Path: may have to change to create a better triangle
   (mainPath = "M -.0 -0.025 L .0 0.025 L "),
@@ -163,7 +173,7 @@ function gaugeChart(data) {
     }
   ];
 
-  let layout = {
+  var layout = {
     shapes: [
       {
         type: "path",
